@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">CandidateArticlesPOC</string>
+    <string name="article_image">Article Image</string>
+    <string name="recent_articles">Recent Articles</string>">
+    <string name="type">Type</string>
+    <string name="category">Category</string>
+    <string name="date">Date</string>
+    <string name="article">Article</string>
+    <string name="related_articles">Related Articles</string>
+</resources>
