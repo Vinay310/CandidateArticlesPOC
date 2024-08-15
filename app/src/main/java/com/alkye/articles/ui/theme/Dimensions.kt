@@ -23,7 +23,8 @@ object Dimensions {
     val cornerSize = 22.5.dp
     val sizeSmall = 8.sp
     val sizeNormal = 16.sp
-    val sizeXSmall = 14.sp
+    val sizeXSmall = 11.sp
+    val sizeXXSmall = 14.sp
     val sizeXMedium = 28.sp
     val sizeXLarge = 18.sp
     val extraLarge = 32.sp

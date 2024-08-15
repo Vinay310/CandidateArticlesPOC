@@ -26,13 +26,14 @@ import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 import com.alkye.articles.R
 import com.alkye.articles.data.Article
 import com.alkye.articles.ui.theme.Dimensions.cardElevation
 import com.alkye.articles.ui.theme.Dimensions.cornerSize
 import com.alkye.articles.ui.theme.Dimensions.extraXPadding
 import com.alkye.articles.ui.theme.Dimensions.padding
+import com.alkye.articles.ui.theme.Dimensions.sizeNormal
+import com.alkye.articles.ui.theme.Dimensions.sizeXSmall
 import com.alkye.articles.ui.theme.Dimensions.spaceExtraSmall
 import com.alkye.articles.ui.theme.Dimensions.spaceLarge
 
@@ -68,7 +69,7 @@ fun ArticleListItem(article: Article, onClick: (article: Article) -> Unit,isIcon
                     Text(
                         text = article.category,
                         fontFamily = FontFamily(Font(R.font.strawford_regular)),
-                        fontSize = 11.sp,
+                        fontSize = sizeXSmall,
                         modifier = Modifier.padding(start = spaceExtraSmall)
                     )
                 }
@@ -89,7 +90,7 @@ fun ArticleListItem(article: Article, onClick: (article: Article) -> Unit,isIcon
                 Text(
                     text = article.publishedDate,
                     fontFamily = FontFamily(Font(R.font.strawford_extralight)),
-                    fontSize = 16.sp,
+                    fontSize = sizeNormal,
                     modifier = Modifier.padding(padding)
                 )
             }

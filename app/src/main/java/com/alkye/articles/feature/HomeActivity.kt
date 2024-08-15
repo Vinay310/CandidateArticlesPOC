@@ -41,6 +41,8 @@ fun CandidateArticleApp() {
     }
 }
 
+// enum to handle the navigation between screens
+
 enum class PAGES {
     HOME,
     DETAIL

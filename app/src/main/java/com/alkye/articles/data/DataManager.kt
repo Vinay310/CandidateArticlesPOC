@@ -6,6 +6,9 @@ import com.alkye.articles.feature.PAGES
 import com.alkye.articles.utils.Constants
 import com.google.gson.Gson
 
+/*
+* Class to handle data and navigation based on currentPage
+*/
 object DataManager {
     var data = emptyArray<Article>()
     var isDataLoaded = mutableStateOf(false)

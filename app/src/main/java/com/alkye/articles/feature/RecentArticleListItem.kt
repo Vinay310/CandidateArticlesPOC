@@ -5,9 +5,7 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxHeight
-import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.CornerSize
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -17,19 +15,18 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
-import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 import com.alkye.articles.R
 import com.alkye.articles.data.Article
 import com.alkye.articles.ui.theme.Dimensions.cardElevation
 import com.alkye.articles.ui.theme.Dimensions.cornerSize
 import com.alkye.articles.ui.theme.Dimensions.padding
+import com.alkye.articles.ui.theme.Dimensions.sizeNormal
+import com.alkye.articles.ui.theme.Dimensions.sizeXSmall
 import com.alkye.articles.ui.theme.Dimensions.spaceExtraSmall
 
 @Composable
@@ -65,27 +62,27 @@ fun RecentArticleListItem(article: Article, onClick: (article: Article) -> Unit)
                     Text(
                         text = article.category,
                         fontFamily = FontFamily(Font(R.font.strawford_regular)),
-                        fontSize = 11.sp,
+                        fontSize = sizeXSmall,
                         modifier = Modifier.padding(start = spaceExtraSmall)
                     )
                 }
                 Text(
                     text = article.title,
                     fontFamily = FontFamily(Font(R.font.strawford_black)),
-                    fontSize = 16.sp,
+                    fontSize = sizeNormal,
                     modifier = Modifier.padding(start=padding)
                 )
                 Text(
                     text = article.description,
                     fontFamily = FontFamily(Font(R.font.strawford_regular)),
-                    fontSize = 16.sp,
+                    fontSize = sizeNormal,
                     modifier = Modifier.padding(start=padding)
                 )
                 
                 Text(
                     text = article.publishedDate,
                     fontFamily = FontFamily(Font(R.font.strawford_extralight)),
-                    fontSize = 16.sp,
+                    fontSize = sizeNormal,
                     modifier = Modifier.padding(padding)
                 )
             }

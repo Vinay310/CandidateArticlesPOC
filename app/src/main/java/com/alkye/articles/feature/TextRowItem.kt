@@ -9,7 +9,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.unit.TextUnit
 import com.alkye.articles.ui.theme.Dimensions.extraPadding
-import com.alkye.articles.ui.theme.Dimensions.padding
 
 @Composable
 fun TextRowItem(
