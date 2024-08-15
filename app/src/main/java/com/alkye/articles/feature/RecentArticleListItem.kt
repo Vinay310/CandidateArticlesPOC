@@ -4,9 +4,11 @@ import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.CornerSize
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Card
@@ -15,6 +17,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
@@ -34,22 +37,21 @@ fun RecentArticleListItem(article: Article, onClick: (article: Article) -> Unit)
     Card(
         elevation = CardDefaults.cardElevation(cardElevation),
         modifier = Modifier
-            .padding(padding)
-            .clickable { onClick(article) }
-            .width(300.dp),
+            .padding(padding).fillMaxWidth()
+            .clickable { onClick(article) },
         colors = CardDefaults.cardColors(Color.White),
         shape = RoundedCornerShape(
             corner = CornerSize(cornerSize)
         )
     ) {
 
-        Row(modifier = Modifier.fillMaxSize()) {
+        Row(modifier = Modifier.fillMaxWidth()) {
             val context = LocalContext.current
             val imageResource: Int = context.resources.getIdentifier(article.articleImage, null, context.packageName)
             Image(
                 painter = painterResource(id = imageResource),
                 contentDescription = stringResource(id = R.string.article_image),
-                modifier = Modifier.weight(0.4f,true)
+                modifier = Modifier.weight(0.4f).fillMaxHeight()
             )
             Column(modifier = Modifier
                 .padding(padding)

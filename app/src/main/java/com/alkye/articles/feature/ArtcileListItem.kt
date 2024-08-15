@@ -51,7 +51,6 @@ fun ArticleListItem(article: Article, onClick: (article: Article) -> Unit,isIcon
                 corner = CornerSize(cornerSize)
             )
         ) {
-
             Column {
                 val context = LocalContext.current
                 val imageResource: Int =
@@ -96,8 +95,9 @@ fun ArticleListItem(article: Article, onClick: (article: Article) -> Unit,isIcon
             }
         }
         if(isIconVisible) {
-            Image(painter = painterResource(id = R.drawable.youtube), modifier = Modifier.padding(
-                extraXPadding).size(spaceLarge), contentDescription ="Youtube")
+            Image(painter = painterResource(id = R.drawable.youtube), modifier = Modifier
+                .padding(extraXPadding)
+                .size(spaceLarge), contentDescription ="Youtube")
         }
     }
 }

@@ -7,4 +7,11 @@
     <string name="date">Date</string>
     <string name="article">Article</string>
     <string name="related_articles">Related Articles</string>
+    <string name="search">Search</string>
+    <string name="logo">Logo</string>
+    <string name="view_all">View All</string>
+    <string name="save">Save</string>
+    <string name="share">Share</string>
+    <string name="youtube">Youtube</string>
+    <string name="star">Star</string>
 </resources>

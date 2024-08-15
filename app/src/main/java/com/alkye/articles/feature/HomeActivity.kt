@@ -18,16 +18,16 @@ class HomeActivity : ComponentActivity() {
         enableEdgeToEdge()
         DataManager.loadDataFromAssetFile(this)
         setContent {
-            CandidateArticlesPOCTheme {
+            CandidateArticlesPOCTheme(dynamicColor = false) {
                 Surface(modifier = Modifier.fillMaxSize(),color = MaterialTheme.colorScheme.background) { 
-                    ArticleListScreen()
+                    CandidateArticleApp()
                 }
             }
         }
     }
 }
 @Composable
-fun ArticleListScreen() {
+fun CandidateArticleApp() {
     if(DataManager.isDataLoaded.value) {
         if(DataManager.currentPage.value == PAGES.HOME) {
             HomeScreen(data = DataManager.data) {
