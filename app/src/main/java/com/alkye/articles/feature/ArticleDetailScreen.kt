@@ -165,7 +165,9 @@ fun ArticleDetailScreen(selectedArticle: Article) {
         )
 
         Column(
-            modifier = Modifier.height(spaceXXXLarge),
+            modifier = Modifier
+                .height(spaceXXXLarge)
+                .padding(start = padding),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             LazyHorizontalGrid(
@@ -204,7 +206,9 @@ fun ArticleDetailScreen(selectedArticle: Article) {
         BackHandler {
             DataManager.switchPages(null)
         }
-        HorizontalArticleList(DataManager.data, onClick = {}, true)
+        Column(modifier = Modifier.padding(start = padding)) {
+            HorizontalArticleList(DataManager.data, onClick = {}, true)
+        }
 
 
     }
